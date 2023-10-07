@@ -22,7 +22,7 @@ function init(j,max){
             icon.addEventListener("click", init.bind(null, j-2,max-2), false);
             icon.classList.add('bi','bi-arrow-left','icon');
             icon.style.left = '30%';
-            icon.setAttribute('data-aos','fade-left');
+            // icon.setAttribute('data-aos','fade-left');
             div3.appendChild(icon);
             creations.appendChild(div3);
         }
@@ -56,7 +56,7 @@ function init(j,max){
             let btn = document.createElement('button');
             btn.addEventListener("click", init.bind(null, j-2,max-2), false);
             let icon = document.createElement('i');
-            icon.setAttribute('data-aos','fade-left');
+            //icon.setAttribute('data-aos','fade-left');
             icon.classList.add('bi','bi-arrow-left')
             btn.appendChild(icon);
             div4.appendChild(btn);
@@ -72,7 +72,7 @@ function init(j,max){
             let icon = document.createElement('i');
             icon.addEventListener("click", init.bind(null, j+2,max+2), false);
             icon.classList.add('bi','bi-arrow-right','icon');
-            icon.setAttribute('data-aos','fade-left');
+            //icon.setAttribute('data-aos','fade-left');
             div2.appendChild(icon);
             creations.appendChild(div2);
         }
@@ -84,7 +84,7 @@ function init(j,max){
             btn.addEventListener("click", init.bind(null, j+2,max+2), false);
             let icon = document.createElement('i');
             icon.classList.add('bi','bi-arrow-right')
-            icon.setAttribute('data-aos','fade-left');
+            // icon.setAttribute('data-aos','fade-left');
             btn.appendChild(icon);
             div5.appendChild(btn);
             creations.appendChild(div5);
@@ -98,3 +98,30 @@ function init(j,max){
 }
 
 init(0,2);
+
+
+// ---------- FORMULAIRE 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const formulaire = document.getElementById("devisForm");
+        const erreurMessage = document.getElementById("erreur");
+
+        formulaire.addEventListener("submit", function (e) {
+            // Empêcher l'envoi du formulaire par défaut
+            e.preventDefault();
+
+            // Vérifier si tous les champs sont remplis
+            const email = document.getElementById("mail").value;
+            const nom = document.getElementById("nom").value;
+            const tel = document.getElementById("tel").value;
+            const message = document.getElementById("message").value;
+
+            if (email === "" || nom === "" || tel === "" || message === "") {
+                erreurMessage.textContent = "Tous les champs doivent être remplis.";
+            } else {
+                // Tous les champs sont remplis, soumettre le formulaire
+                formulaire.submit();
+            }
+        });
+    });
+

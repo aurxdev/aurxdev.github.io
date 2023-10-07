@@ -28,6 +28,7 @@ h2{font-size: 30px;}
 
 
 body{background-color: var(--grey-color);}
+.red-text{color: #DC4C64;}
 
    
 :link{text-decoration: none; color: white;}

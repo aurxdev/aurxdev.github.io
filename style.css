@@ -191,7 +191,9 @@ li{list-style: none; padding-left: 10px; font-size: larger;}
     section#creations .iconDivMobile{display:inline; position: relative;
         left: 30%;
      }
-
+     section#intro{animation: linear gradient;
+        animation-duration: auto;
+        animation-timeline: scroll();}
 
 }
 

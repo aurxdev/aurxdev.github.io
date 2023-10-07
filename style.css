@@ -28,6 +28,7 @@ h2{font-size: 30px;}
 
 
 body{background-color: var(--grey-color);}
+.red-text{color: #DC4C64;}
 
    
 :link{text-decoration: none; color: white;}
@@ -191,7 +192,9 @@ li{list-style: none; padding-left: 10px; font-size: larger;}
     section#creations .iconDivMobile{display:inline; position: relative;
         left: 30%;
      }
-
+     section#intro{animation: linear gradient;
+        animation-duration: auto;
+        animation-timeline: scroll();}
 
 }
 

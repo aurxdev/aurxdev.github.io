@@ -68,7 +68,7 @@ hr{height: 3px; background-color: var(--white-color); border: 0; width: 150px; m
 
 /* STYLE DES SECTIONS */
 
-section#intro{ height: 100vh; padding-top: 5vh; padding-bottom: 5vh; background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);background-size: 200% 250%; animation: gradient 10s ease infinite;}
+section#intro{padding-top: 5vh; padding-bottom: 5vh; background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);background-size: 200% 250%; animation: gradient 3s ease infinite;}
 
 @keyframes gradient {
 	0% {
@@ -110,10 +110,11 @@ button:hover{border: 2px solid var(--primary-blue);}
 
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
 h1#titre{font-size: 78px;}
-h1{font-size: 28px; padding: 10px 0px 10px 0px;}
+h1{font-size: 38px; padding: 10px 0px 10px 0px;}
 hr{height: 3px; background-color: var(--primary-blue); border: 0; width: 150px; margin: 15px 0px 15px 0px;}
 
-
+section#apropos{background-color: var(--grey-color-alt); padding: 20px; margin: auto !important;}
+section#apropos h2 {padding: 5px;}
 
 section#creations{background-color: var(--grey-color);text-align: center; padding-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr .5fr;}
 section#creations h1{font-size: 38px;}

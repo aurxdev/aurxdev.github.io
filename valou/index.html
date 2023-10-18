@@ -1,0 +1,67 @@
+<head>
+    <meta charset="utf-8" />
+    <title>BEATMAKER</title>
+    <script src="./Assets/repeat.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  </head>
+  
+  <body>
+    <div class="content-container">
+      <div class="text-line" data-aos="fade-down" data-aos-duration="600">valalaprod</div>
+      <div class="text-line" data-aos="fade-down" data-aos-duration="800">valalaprod</div>
+      <div class="text-line" data-aos="fade-down" data-aos-duration="1000">valalaprod</div>
+      <div class="text-line" data-aos="fade-down" data-aos-duration="1200">valalaprod</div>
+      <div class="texte">
+        <h2 data-aos="fade-down" data-aos-duration="1200">Jeune beatmaker</h2> 
+        <hr data-aos="fade-down" data-aos-duration="1250">
+        <h3 data-aos="fade-down" data-aos-duration="1250">Je suis un beatmaker français passionné de rap qui crée des prods de haute qualité avec FL Studio.<br/> Mon portfolio inclut des extraits de mes productions pour que vous puissiez entendre par vous-même la qualité de mon travail. <br/>Je suis confiant que je peux vous fournir des productions qui feront ressortir le meilleur de votre musique, que vous cherchiez des beats mélodiques ou des sons plus durs.</h3>
+      </div>
+    </div>
+    <section>
+      <div id="presentation">
+          <h1>Mes prods</h1>
+
+      </div>
+
+
+      <div id="atouts">
+        <h3 data-aos="fade-right" data-aos-duration="500"><i class="bi bi-fast-forward-circle-fill"> Rapidité</i>Je comprends l'importance de respecter les échéances, c'est pourquoi je suis fier de ma capacité à travailler efficacement pour fournir des productions de haute qualité dans des délais courts.</h3>
+          <h3 data-aos="fade-right" data-aos-duration="800"><i class="bi bi-globe-americas"> Diversité</i>Que vous cherchiez des beats boom bap, trap ou lo-fi, je suis capable de créer des productions qui répondent à vos besoins.</h3>
+          <h3 data-aos="fade-right" data-aos-duration="1100"><i class="bi bi-vinyl"> Flexibilité</i>En tant que beatmaker, je suis capable de m'adapter à différents styles de rap et de travailler avec les artistes pour créer des morceaux qui répondent à leurs besoins.</h3>
+      </div>
+    </section>
+    <footer>
+      <h3>Made with 🤍 by @auredev</h3>
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    
+      var presentation = document.getElementById('presentation');
+      function initProd(){
+        var elt,img,txt;
+        var nbProds = 4;
+        for(var i=0; i<nbProds;i++){
+          elt = document.createElement('div');
+          elt.classList.add('cart');
+          elt.setAttribute('data-aos', 'fade-up');
+          elt.setAttribute('data-aos-duration', i*150+300);
+          img = document.createElement('img');
+          img.setAttribute('src', 'https://images8.alphacoders.com/896/896653.jpg');
+          txt=document.createElement('h4');
+          txt.textContent = 'Beat: '+String(i);
+
+          elt.appendChild(img);
+          elt.appendChild(txt);
+          presentation.appendChild(elt);
+
+        }
+      }
+      initProd();
+
+    </script>
+  </body>

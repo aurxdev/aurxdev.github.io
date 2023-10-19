@@ -3,8 +3,12 @@ function setup() {
     cnv.parent('container');
     frameRate(30);
     setupLines();
-    cnv.mouseOver(startAnimation);
-    cnv.mouseOut(stopAnimation);
+
+    // si on est sur un ordinateur
+    if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+      cnv.mouseOver(startAnimation);
+      cnv.mouseOut(stopAnimation);
+     }
   }
 
   function startAnimation() {
@@ -57,9 +61,9 @@ function setup() {
     let calculX=0,calculY=0;
     for (let i = 0; i < position.length-1; i++) {
           yOffset +=0.001;
-          xOffset +=0.0001;
-          calculX=cos(xOffset)*3+mouseX/80;
-          calculY=sin(yOffset)*3+mouseY/80;
+          xOffset +=0.001;
+          calculX=cos(xOffset)*15+mouseX/80;
+          calculY=sin(yOffset)*10+mouseY/80;
           stroke(150);
           line(position[i][0]+calculX,position[i][1]+calculY,position[i+1][0]+calculX,position[i+1][1]+calculY);
           fill(150);

@@ -4,11 +4,11 @@ function setup() {
     frameRate(30);
     setupLines();
 
-    // si on est sur un ordinateur
+    /* si on est sur un ordinateur
     if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
       cnv.mouseOver(startAnimation);
       cnv.mouseOut(stopAnimation);
-     }
+     }*/
   }
 
   function startAnimation() {

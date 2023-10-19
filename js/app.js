@@ -3,7 +3,7 @@ AOS.init();
 let creations = document.getElementById('creations');
 
 let titre = ['<a href="https://www.2batconstruction.fr" target="_blank"><i class="bi bi-link"></i> 2BAT Construction</a>', '<a href="valou/" target="_blank"><i class="bi bi-link"></i> Valalaprod</a>', '<i class="bi bi-filetype-py"></i> Jeu de la vie', '<i class="bi bi-filetype-py"></i> Tetris'];
-let image = ['2bat.png', 'valou.png', 'jeuVie.gif','tetris.png'];
+let image = ['src/2bat.png', 'src/valou.png', 'src/jeuVie.gif','src/tetris.png'];
 let desc = ['Site web pour une entreprise.', 'Site web pour un producteur de musique.', 'Simulation du jeu de la vie.', 'Tetris développé en Python.']
 let tabDiv = []
 

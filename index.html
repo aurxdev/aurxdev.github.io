@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
     <title>Aurélien Teilhet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,16 +46,16 @@
         <div class="flex flex-col sm:flex-row gap-4">
             <div class="container basis-2/3 hover:border-blue-700 home h-96" data-aos="fade-down" data-aos-duration="700">
                 <div class="flex flex-col sm:flex-row">
+                    <div>
+                        <h6 class="text-m pb-3 text-blue-200">hi there 👋</h6>
+                        <p class="pb-2 text-xl font-extralight">Bonjour, je suis <span class="font-extrabold">Aurélien Teilhet</span>, développeur junior actuellement en 3ème année à la Faculté Jean Perrin de Lens.</p>
+                        <p class="text-xl font-extralight"">Je suis à la recherche d'un stage d'une durée de 8 mois dans le développement informatique à partir du 20 mars.</p>
+                    </div>
+                    <div class="absolute left-36 sm:relative sm:left-0">
+                        <img src="public/me.png" alt="photo animoji" class="w-52 max-w-full h-auto opacity-30 sm:opacity-100 z-0">
+                    </div>
+                </div>
                 <div>
-                    <h6 class="text-m pb-3 text-blue-200">hi there 👋</h6>
-                    <p class="pb-2 text-xl font-extralight">Bonjour, je suis <span class="font-extrabold">Aurélien Teilhet</span>, développeur junior actuellement en 3ème année à la Faculté Jean Perrin de Lens.</p>
-                    <p class="text-xl font-extralight"">Je suis à la recherche d'un stage d'une durée de 8 mois dans le développement informatique à partir du 20 mars.</p>
-                </div>
-                <div class="absolute left-36 sm:relative sm:left-0">
-                    <img src="public/me.png" alt="photo animoji" class="w-60 max-w-full h-auto opacity-30 sm:opacity-100 z-0">
-                </div>
-                </div>
-                <div class="pt-4">
                     <a href="https://github.com/aurxdev/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                     </svg></button></a>
@@ -65,7 +65,7 @@
                     <a href="https://twitter.com/auredevx" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
                         <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
                     </svg></button></a>
-                  </div>
+                </div>
             </div>
             <div class="container basis-1/3 hover:border-blue-700" data-aos="fade-left" data-aos-duration="750">        
                 <h1 class="text-2xl pb-4">📖 À propos de moi</h1>
@@ -98,9 +98,13 @@
                 </ul>
                 </a>
             </div>
-            <div class="container hover:border-blue-700" data-aos="fade-left" data-aos-duration="1100" data-aos-easing="ease-out">
-                <h1 class="text-2xl pb-4">📅 Aujourd'hui</h1>
-                <p>Actuellement en train de d'apprendre les languages Haskell et Assembleur.</p>
+            <div class="container hover:border-blue-700" data-aos="fade-left" data-aos-duration="1300" data-aos-easing="ease-in-out-cubic">
+                <h1 class="text-2xl pb-4">📚 Technologies utilisées</h1>
+                <ul>
+                    <li>Git, Npm</li>
+                    <li>Tailwind CSS</li>
+                    <li>Vue.js</li>
+                </ul>
             </div>
             <div class="container hover:border-blue-700" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out-cubic">
                 <h1 class="text-2xl pb-4">📞 Me contacter</h1>
@@ -111,14 +115,10 @@
                     </li>
                 </ul>
             </div>  
-            <div class="container hover:border-blue-700" data-aos="fade-up" data-aos-duration="1300" data-aos-easing="ease-in-out-cubic">
-                <h1 class="text-2xl pb-4">📚 Technologies utilisées</h1>
-                <ul>
-                    <li>Git, Npm</li>
-                    <li>Tailwind CSS</li>
-                    <li>Vue.js</li>
-                </ul>
-        </div>
+            <div class="container hover:border-blue-700" data-aos="fade-left" data-aos-duration="1100" data-aos-easing="ease-out">
+                <h1 class="text-2xl pb-4">📅 Aujourd'hui</h1>
+                <p>Actuellement en train d'apprendre les languages Haskell et Assembleur.</p>
+            </div>
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

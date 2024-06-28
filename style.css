@@ -25,6 +25,26 @@ p{font-weight: 300;}
 ul li{list-style-type: circle; margin-left: 20px; padding-bottom: 2px;}     
 .home a{margin: 5px; border: rgb(29 78 216) solid 1px; padding:10px 20px 10px 20px; border-radius: 10px;} 
 
+.adjectifs{display: flex; flex-direction:row; gap:5px; flex-wrap: wrap;}
+
+.gradient{
+    vertical-align: middle;
+    padding: 6px;
+    border: 1px solid black !important;
+
+    border-image-slice: 1 !important;
+    border-width: 1px !important;
+    transition: all .1s;}
+
+.gradient:hover{
+    border-image-source: linear-gradient(to right, #743ad5, #d53a9d) !important;
+}
+
+.reseaux{margin: 10px 0 0 0;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;}
+
 #pseudo{
         background: -webkit-linear-gradient(0deg, #ffa745 0%, #fe869f 30%, #ef7ac8 45%, #a083ed 70%, #43aeff 85%);
         -webkit-background-clip: text;

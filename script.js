@@ -1,112 +1,99 @@
-/**
- * Portfolio - Logic
- */
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Les clés sont les textes français exacts de index.html (un nœud texte = une clé).
     const translations = {
         en: {
             'À propos': 'About',
             'Expérience': 'Experience',
             'Compétences': 'Skills',
             'Projets': 'Projects',
-            'Développeur': 'Full Stack',
-            'Full Stack.': 'Developer.',
-            'Bonjour, je suis Aurélien Teilhet.': 'Hello, I am Aurélien Teilhet.',
-            'Développeur passionné par l\'intelligence artificielle, l\'algorithmie et la création d\'applications web.': 'Developer passionate about artificial intelligence, algorithms, and building web applications.',
-            'Voir mes projets': 'View my projects',
-            'Télécharger mon CV': 'Download my résumé',
-            'À propos': 'About',
-            'Actuellement étudiant en 2ème année de cycle ingénieur à': 'Currently a second-year engineering student at',
-            '(Informatique, IA et Statistiques) et': '(Computer Science, AI, and Statistics) and a',
-            'développeur Full Stack': 'Full Stack developer',
-            'en alternance chez': 'apprentice at',
-            'J\'aborde le développement avec un regard pragmatique : j\'aime le code propre, les architectures solides et les interfaces qui vont à l\'essentiel. L\'intelligence artificielle est pour moi un outil puissant pour repousser les limites de nos applications.': 'I take a pragmatic approach to development: I value clean code, solid architectures, and focused interfaces. Artificial intelligence is a powerful tool for extending what applications can achieve.',
-            'Français': 'French',
-            'Anglais (TOEIC)': 'English (TOEIC)',
-            'ans': 'years',
-            'd\'expérience en entreprise': 'of professional experience',
-            'Double profil': 'Dual profile',
-            'Ingénierie logicielle & Intelligence artificielle': 'Software engineering & artificial intelligence',
-            'Expérience Professionnelle': 'Professional experience',
-            'Développeur Full Stack (Alternance)': 'Full Stack Developer (Apprenticeship)',
-            'Septembre 2024 - Présent': 'September 2024 – Present',
-            'Développement d’interfaces utilisateurs dynamiques et réactives avec': 'Built dynamic and responsive user interfaces with',
-            'Conception et implémentation d’API REST avec': 'Designed and implemented REST APIs with',
-            'Optimisation des performances applicatives avec une': 'Improved application performance, achieving a',
-            'réduction de 50%': '50% reduction',
-            'des appels API grâce à la refonte des requêtes.': 'in API calls by redesigning queries.',
-            'Réalisation de tests E2E avec': 'Created E2E tests with',
-            'pour assurer la qualité des livrables.': 'to ensure deliverable quality.',
-            'Traduction des': 'Translated',
-            'exigences fonctionnelles': 'functional requirements',
-            'en': 'into',
-            'solutions techniques': 'technical solutions',
-            'adaptées.': 'tailored to needs.',
-            'Compétences techniques': 'Technical skills',
-            'Analyse & Stat.': 'Analytics & Statistics',
-            'Outils & DevOps': 'Tools & DevOps',
-            'Projets récents': 'Recent projects',
-            'Création d\'un jeu vidéo gérant la physique, un système avancé de détection de collisions, la gestion d\'inventaire et des intelligences artificielles (IA) ennemies basiques.': 'Built a video game featuring physics, advanced collision detection, inventory management, and basic enemy AI.',
-            'Game Design': 'Game Design',
-            'Plateforme interactive pour réviser la certification Azure AZ-900, développée avec Python et déployée sur Azure App Service.': 'Interactive study platform for the Azure AZ-900 certification, built with Python and deployed on Azure App Service.',
-            'Contact': 'Contact',
-            'Me': 'Get in',
-            'contacter': 'touch',
-            'Directement via les réseaux :': 'Reach out through:',
-            'Ou': 'Or',
+            'Développeur full stack · étudiant ingénieur': 'Full stack developer · engineering student',
+            'Salut, moi c\'est Aurélien.': 'Hi, I\'m Aurélien.',
+            'Je développe des applications web en Angular et C#/.NET chez Pragmatism IT, en alternance avec mon cycle ingénieur à Polytech Lille.': 'I build web applications with Angular and C#/.NET at Pragmatism IT, as an apprentice alongside my engineering degree at Polytech Lille.',
+            'À côté, je code des jeux et je résous des puzzles d\'algo sur': 'On the side, I make games and solve algorithm puzzles on',
+            'Mon CV (PDF)': 'My résumé (PDF)',
+            'Me contacter': 'Get in touch',
+            'École': 'School',
+            '2e année du cycle ingénieur à Polytech Lille, spécialité Informatique, IA et Statistiques.': 'Second year of the engineering program at Polytech Lille, majoring in Computer Science, AI and Statistics.',
+            'Travail': 'Work',
+            'Développeur full stack en alternance chez Pragmatism IT depuis septembre 2024.': 'Full stack developer apprentice at Pragmatism IT since September 2024.',
+            'Langues': 'Languages',
+            'Français, anglais (TOEIC 875).': 'French, English (TOEIC 875).',
+            'Ailleurs': 'Elsewhere',
+            'La marche en nature, surtout en montagne, et les Lego.': 'Hiking, especially in the mountains, and building Lego.',
+            'À l\'école j\'apprends l\'IA et les statistiques, en entreprise je fais du développement web. Ce qui m\'intéresse, c\'est l\'endroit où les deux se rejoignent : des applications qui se servent de modèles là où ils apportent vraiment quelque chose.': 'At school I study AI and statistics; at work I do web development. What interests me is where the two meet: applications that use models where they genuinely add something.',
+            'sept. 2024 – aujourd\'hui': 'Sept. 2024 – present',
+            'Développeur full stack (alternance), Pragmatism IT': 'Full stack developer (apprenticeship), Pragmatism IT',
+            'Je développe les interfaces en Angular 18 et les API REST en NestJS et en C#/.NET.': 'I build the front end in Angular 18 and the REST APIs in NestJS and C#/.NET.',
+            'J\'ai réécrit une partie des requêtes, ce qui a': 'I rewrote part of the queries, which',
+            'divisé par deux': 'halved',
+            'le nombre d\'appels API.': 'the number of API calls.',
+            'J\'écris les tests end-to-end avec Cypress.': 'I write the end-to-end tests with Cypress.',
+            'Je pars des besoins fonctionnels pour arriver à une solution technique, puis je l\'implémente.': 'I take functional requirements, turn them into a technical solution, then implement it.',
+            'IA & data': 'AI & data',
+            'Python, statistiques, analyse de données': 'Python, statistics, data analysis',
+            'Outils': 'Tools',
+            'Capture d\'écran de HGPTE Engine': 'Screenshot of HGPTE Engine',
+            'Survolez l\'image pour voir le jeu en mouvement.': 'Hover over the image to see the game in motion.',
+            'Un jeu en C# avec Unity : physique, détection de collisions, inventaire et ennemis pilotés par une IA simple.': 'A game in C# with Unity: physics, collision detection, inventory, and enemies driven by a simple AI.',
+            'Le reste de mon code est sur': 'The rest of my code is on',
+            'Une question, une opportunité ? Le formulaire m\'envoie directement un mail. Je suis aussi sur': 'A question or an opportunity? The form sends me an email directly. I\'m also on',
             'Nom': 'Name',
-            'Message': 'Message',
-            'Envoyer le message': 'Send message',
-            'Envoi en cours...': 'Sending...',
-            'Message envoyé avec succès !': 'Message sent successfully!',
-            'Erreur lors de l\'envoi. Veuillez réessayer.': 'Something went wrong. Please try again.'
+            'Envoyer': 'Send',
+            'Code source du site': 'Site source code'
         }
+    };
+
+    // Textes français d'origine, pour pouvoir revenir au français sans recharger.
+    const originalText = new Map();
+    const originalAlt = new Map();
+
+    const translate = (dictionary, text) => {
+        const trimmed = text.trim();
+        return trimmed && dictionary[trimmed] ? text.replace(trimmed, dictionary[trimmed]) : text;
     };
 
     const translatePage = (language) => {
         const dictionary = translations[language] || {};
         document.documentElement.lang = language;
-        document.title = language === 'en' ? 'Aurélien Teilhet | Full Stack Developer' : 'Aurélien Teilhet | Développeur Full Stack';
+        document.title = language === 'en'
+            ? 'Aurélien Teilhet, full stack developer'
+            : 'Aurélien Teilhet, développeur full stack';
 
         const cvDownload = document.getElementById('cvDownload');
-        if (cvDownload) {
-            cvDownload.href = language === 'en'
-                ? 'https://aurxdev.github.io/cv_anglais.pdf'
-                : 'https://aurxdev.github.io/cv.pdf';
-        }
+        if (cvDownload) cvDownload.href = language === 'en' ? 'cv_anglais.pdf' : 'cv.pdf';
 
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        const textNodes = [];
         let node;
-        while ((node = walker.nextNode())) textNodes.push(node);
+        while ((node = walker.nextNode())) {
+            if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+            node.nodeValue = translate(dictionary, originalText.get(node));
+        }
 
-        textNodes.forEach((textNode) => {
-            const original = textNode.nodeValue;
-            const trimmed = original.trim();
-            if (!trimmed || !dictionary[trimmed]) return;
-            textNode.nodeValue = original.replace(trimmed, dictionary[trimmed]);
+        document.querySelectorAll('img[alt]').forEach((img) => {
+            if (!originalAlt.has(img)) originalAlt.set(img, img.alt);
+            img.alt = translate(dictionary, originalAlt.get(img));
         });
 
         document.querySelectorAll('.language-button').forEach((button) => {
-            const isActive = button.dataset.language === language;
-            button.setAttribute('aria-pressed', String(isActive));
-            button.classList.toggle('bg-white', isActive);
-            button.classList.toggle('text-zinc-950', isActive);
-            button.classList.toggle('text-zinc-500', !isActive);
+            button.setAttribute('aria-pressed', String(button.dataset.language === language));
         });
     };
 
-    const initialLanguage = localStorage.getItem('portfolio-language') || 'fr';
-    translatePage(initialLanguage);
+    const readLanguage = () => {
+        try { return localStorage.getItem('portfolio-language') || 'fr'; } catch { return 'fr'; }
+    };
+
+    translatePage(readLanguage());
 
     document.querySelectorAll('.language-button').forEach((button) => {
         button.addEventListener('click', () => {
             const language = button.dataset.language;
-            localStorage.setItem('portfolio-language', language);
-            window.location.reload();
+            try { localStorage.setItem('portfolio-language', language); } catch { /* navigation privée */ }
+            translatePage(language);
         });
     });
 
+    // Formulaire de contact (Formspree)
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const formStatus = document.getElementById('formStatus');
@@ -114,142 +101,68 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const originalBtnText = submitBtn.textContent;
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-                _subject: `Nouveau contact Portfolio : ${document.getElementById('name').value}`
-            };
-            
-            // Loading state
+
             const isEnglish = document.documentElement.lang === 'en';
+            const originalBtnText = submitBtn.textContent;
+            const name = document.getElementById('name').value;
+
             submitBtn.textContent = isEnglish ? 'Sending...' : 'Envoi en cours...';
             submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-            formStatus.classList.add('hidden');
-            
+            formStatus.hidden = true;
+
             try {
-                // Send to Formspree via AJAX
                 const response = await fetch('https://formspree.io/f/xykvezzz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify({
+                        name,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value,
+                        _subject: `Nouveau contact Portfolio : ${name}`
+                    })
                 });
-                
-                if (response.ok) {
-                    formStatus.textContent = isEnglish ? 'Message sent successfully!' : 'Message envoyé avec succès !';
-                    formStatus.className = 'text-sm text-center mt-2 text-emerald-500 block';
-                    contactForm.reset();
-                } else {
-                    throw new Error('Erreur');
-                }
+
+                if (!response.ok) throw new Error(`Formspree: ${response.status}`);
+
+                formStatus.textContent = isEnglish ? 'Message sent, thanks! I\'ll get back to you soon.' : 'Message envoyé, merci ! Je vous réponds rapidement.';
+                formStatus.className = 'form-status ok';
+                contactForm.reset();
             } catch (error) {
-                formStatus.textContent = isEnglish ? 'Something went wrong. Please try again.' : "Erreur lors de l'envoi. Veuillez réessayer.";
-                formStatus.className = 'text-sm text-center mt-2 text-red-500 block';
+                formStatus.textContent = isEnglish
+                    ? 'The message could not be sent. Try again, or reach me on LinkedIn.'
+                    : 'Le message n\'est pas parti. Réessayez, ou écrivez-moi sur LinkedIn.';
+                formStatus.className = 'form-status error';
             }
-            
-            // Reset button
+
+            formStatus.hidden = false;
             submitBtn.textContent = originalBtnText;
             submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
         });
     }
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-
-    // Scroll Animation (Fade in up)
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Une fois animée, on arrête d'observer cette section
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // On applique la classe de base et on observe toutes les sections de la page
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('fade-in-up');
-        sectionObserver.observe(section);
+    // GIF du projet : chargé seulement au premier survol (il pèse ~7 Mo)
+    document.querySelectorAll('[data-gif]').forEach((media) => {
+        const gif = media.querySelector('.project-gif');
+        const load = () => { if (gif && !gif.src) gif.src = media.dataset.gif; };
+        media.addEventListener('mouseenter', load, { once: true });
+        media.addEventListener('focus', load, { once: true });
     });
 
-    // On injecte l'année en cours dans le footer
-    const annee = new Date().getFullYear();
-    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Scrollspy (Active Navbar Links)
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]:not([href="#"])'); // Exclut le bouton Logo
-
-    const scrollSpyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const currentId = entry.target.getAttribute('id');
-                
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === `#${currentId}`) {
-                        // Rendre le lien actif (blanc et un peu plus gras)
-                        link.classList.add('text-white', 'font-semibold');
-                        link.classList.remove('text-zinc-400');
-                    } else {
-                        // Remettre le lien inactif
-                        link.classList.remove('text-white', 'font-semibold');
-                        link.classList.add('text-zinc-400');
-                    }
-                });
-            }
-        });
-    }, { rootMargin: '-40% 0px -60% 0px' }); // Déclenche quand la section arrive au milieu de l'écran
-
-    sections.forEach(section => scrollSpyObserver.observe(section));
-
-    // Back to Top Button
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-                backToTopBtn.classList.add('opacity-100', 'translate-y-0');
-            } else {
-                backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-                backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+    // Lien actif dans la navigation
+    const navLinks = document.querySelectorAll('.site-nav a');
+    const scrollSpy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((link) => {
+                link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
             });
         });
-    }
+    }, { rootMargin: '-40% 0px -60% 0px' });
+
+    document.querySelectorAll('section[id]').forEach((section) => scrollSpy.observe(section));
 });

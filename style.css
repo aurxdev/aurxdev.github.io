@@ -356,31 +356,39 @@ h1, h2, h3 { line-height: 1.2; }
 .form-status.ok { color: var(--ok); }
 .form-status.error { color: var(--error); }
 
-/* Pied de page : une ligne de crête à la place du trait */
-
-.ridge {
-    display: block;
-    width: 100%;
-    height: 90px;
-    margin-top: 32px;
-}
-.ridge polyline {
-    fill: none;
-    stroke-width: 1.5;
-    stroke-linejoin: round;
-    vector-effect: non-scaling-stroke;
-}
-.ridge-back { stroke: var(--rule); }
-.ridge-front { stroke: var(--accent); }
+/* Pied de page : une gorge de montagne au crépuscule, sur toute la largeur.
+   Le texte est posé sur les versants sombres, quel que soit le thème. */
 
 .site-footer {
+    --accent: #86c29b;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: clamp(320px, 32vw, 460px);
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: #a9a3bd;
+}
+
+.gorge {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+
+.footer-bar {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 8px 24px;
-    padding: 16px 0 48px;
-    font-family: var(--mono);
-    font-size: 0.8rem;
-    color: var(--muted);
+    width: 100%;
+    padding-bottom: 32px;
 }
 .site-footer p { margin: 0; }
+.site-footer a { color: #e6e2f0; }
+.site-footer a:hover { color: var(--accent); }

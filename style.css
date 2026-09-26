@@ -4,8 +4,8 @@
     --muted: #6d685e;
     --rule: #d8d2c4;
     --field: #fbf9f4;
-    --accent: #2f5d46;       /* vert sapin */
-    --accent-soft: #d6e0d2;  /* sauge, derrière la photo */
+    --accent: #45529a;       /* bleu du ciel de gorge.svg */
+    --accent-soft: #dde0f0;  /* lavande, halo derrière la photo */
     --ok: #2f7d4f;
     --error: #b8321f;
 
@@ -20,8 +20,8 @@
         --muted: #9b958a;
         --rule: #34312c;
         --field: #1f1d1a;
-        --accent: #86c29b;
-        --accent-soft: #24322a;
+        --accent: #9ea7d8;
+        --accent-soft: #262a44;
         --ok: #6fcf97;
         --error: #ff8a75;
     }
@@ -164,12 +164,13 @@ h1, h2, h3 { line-height: 1.2; }
 
 .lede { font-size: 1.15rem; }
 
+/* Pas de cadre : me.png est détourée, on garde juste un halo et on fond les épaules dans la page */
 .photo {
     margin: 0;
     aspect-ratio: 1;
-    overflow: hidden;
-    background: var(--accent-soft);
-    border-radius: 3px;
+    background: radial-gradient(circle closest-side, var(--accent-soft) 45%, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 40%, #000 60%, transparent);
+    mask-image: radial-gradient(ellipse 50% 60% at 50% 40%, #000 60%, transparent);
 }
 .photo img {
     display: block;
@@ -360,7 +361,7 @@ h1, h2, h3 { line-height: 1.2; }
    Le texte est posé sur les versants sombres, quel que soit le thème. */
 
 .site-footer {
-    --accent: #86c29b;
+    --accent: #9ea7d8;
     position: relative;
     display: flex;
     align-items: flex-end;

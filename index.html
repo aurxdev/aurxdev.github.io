@@ -29,10 +29,10 @@
     <header class="site-header">
         <a href="#" class="brand">Aurélien Teilhet</a>
         <nav class="site-nav" aria-label="Sections">
-            <a href="#about">À propos</a>
-            <a href="#experience">Expérience</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
+            <a href="#about" data-i18n="nav.about">À propos</a>
+            <a href="#experience" data-i18n="nav.experience">Expérience</a>
+            <a href="#skills" data-i18n="nav.skills">Compétences</a>
+            <a href="#projects" data-i18n="nav.projects">Projets</a>
             <a href="#contact">Contact</a>
         </nav>
         <div class="lang" role="group" aria-label="Langue / Language">
@@ -46,78 +46,86 @@
 
         <section class="intro">
             <div>
-                <p class="meta">Développeur full stack · étudiant ingénieur</p>
-                <h1>Salut, moi c'est Aurélien.</h1>
-                <p class="lede">Je développe des applications web en Angular et C#/.NET chez Pragmatism IT, en alternance avec mon cycle ingénieur à Polytech Lille.</p>
-                <p>À côté, je code des jeux et je résous des puzzles d'algo sur <a href="https://www.codingame.com/profile/17610c9aafa584d1a23a3524a8ca84f03948395" target="_blank" rel="noopener">CodinGame</a>.</p>
+                <p class="meta" data-i18n="intro.meta">Développeur full stack · étudiant ingénieur</p>
+                <h1 data-i18n="intro.title">Salut, moi c'est Aurélien.</h1>
+                <p class="lede" data-i18n="intro.lede">Je développe des applications web en Angular et C#/.NET chez Pragmatism IT, en alternance avec mon cycle ingénieur à Polytech Lille.</p>
+                <p><span data-i18n="intro.side">À côté, je code des jeux et je résous des puzzles d'algo sur</span> <a href="https://www.codingame.com/profile/17610c9aafa584d1a23a3524a8ca84f03948395" target="_blank" rel="noopener">CodinGame</a>.</p>
                 <div class="actions">
-                    <a id="cvDownload" class="button" href="cv.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
-                    <a href="#contact">Me contacter</a>
+                    <a id="cvDownload" class="button" href="cv.pdf" target="_blank" rel="noopener" data-i18n="intro.cv">Mon CV (PDF)</a>
+                    <a href="https://github.com/aurxdev" target="_blank" rel="noopener">GitHub</a>
+                    <a href="#contact" data-i18n="intro.contact">Me contacter</a>
                 </div>
             </div>
             <figure class="photo">
-                <img src="me.png" alt="Aurélien Teilhet" width="588" height="600">
+                <img src="me.png" alt="Aurélien Teilhet" width="406" height="406">
             </figure>
         </section>
 
         <section id="about" class="block">
-            <h2>À propos</h2>
+            <h2 data-i18n="nav.about">À propos</h2>
             <div class="block-body">
                 <ul class="facts">
-                    <li><span class="meta">École</span><span>2e année du cycle ingénieur à Polytech Lille, spécialité Informatique, IA et Statistiques.</span></li>
-                    <li><span class="meta">Travail</span><span>Développeur full stack en alternance chez Pragmatism IT depuis septembre 2024.</span></li>
-                    <li><span class="meta">Langues</span><span>Français, anglais (TOEIC 875).</span></li>
-                    <li><span class="meta">Ailleurs</span><span>La marche en nature, surtout en montagne, et les Lego.</span></li>
+                    <li><span class="meta" data-i18n="about.school">École</span><span data-i18n="about.schoolText">Cycle ingénieur à Polytech Lille, spécialité Informatique, IA et Statistiques, diplôme en 2027.</span></li>
+                    <li><span class="meta" data-i18n="about.work">Travail</span><span data-i18n="about.workText">Développeur full stack en alternance chez Pragmatism IT depuis septembre 2024.</span></li>
+                    <li><span class="meta" data-i18n="about.languages">Langues</span><span data-i18n="about.languagesText">Français, anglais (TOEIC 875).</span></li>
+                    <li><span class="meta" data-i18n="about.elsewhere">Ailleurs</span><span data-i18n="about.elsewhereText">La marche en nature, surtout en montagne, et les Lego.</span></li>
                 </ul>
-                <p>À l'école j'apprends l'IA et les statistiques, en entreprise je fais du développement web. Ce qui m'intéresse, c'est l'endroit où les deux se rejoignent : des applications qui se servent de modèles là où ils apportent vraiment quelque chose.</p>
+                <p data-i18n="about.text">À l'école j'apprends l'IA et les statistiques, en entreprise je fais du développement web. Ce qui m'intéresse, c'est l'endroit où les deux se rejoignent : des applications qui se servent de modèles là où ils apportent vraiment quelque chose.</p>
             </div>
         </section>
 
         <section id="experience" class="block">
-            <h2>Expérience</h2>
+            <h2 data-i18n="nav.experience">Expérience</h2>
             <div class="block-body">
                 <article class="job">
-                    <p class="meta">sept. 2024 – aujourd'hui</p>
-                    <h3>Développeur full stack (alternance), Pragmatism IT</h3>
+                    <p class="meta" data-i18n="pragmatism.dates">sept. 2024 – aujourd'hui</p>
+                    <h3 data-i18n="pragmatism.title">Développeur full stack (alternance), Pragmatism IT</h3>
                     <ul class="dash">
-                        <li>Je développe les interfaces en Angular 18 et les API REST en NestJS et en C#/.NET.</li>
-                        <li>J'ai réécrit une partie des requêtes, ce qui a <strong>divisé par deux</strong> le nombre d'appels API.</li>
-                        <li>J'écris les tests end-to-end avec Cypress.</li>
-                        <li>Je pars des besoins fonctionnels pour arriver à une solution technique, puis je l'implémente.</li>
+                        <li data-i18n="pragmatism.stack">Je développe les interfaces en Angular 18 et les API REST en NestJS et en C#/.NET.</li>
+                        <li data-i18n="pragmatism.queries">J'ai réécrit une partie des requêtes, ce qui a <strong>divisé par deux</strong> le nombre d'appels API.</li>
+                        <li data-i18n="pragmatism.tests">J'écris les tests end-to-end avec Cypress.</li>
+                        <li data-i18n="pragmatism.specs">Je pars des besoins fonctionnels pour arriver à une solution technique, puis je l'implémente.</li>
+                    </ul>
+                </article>
+                <article class="job">
+                    <p class="meta" data-i18n="alloa.dates">mars – juil. 2024</p>
+                    <h3 data-i18n="alloa.title">Développeur Python et Go (stage), Alloa Voyages</h3>
+                    <ul class="dash">
+                        <li data-i18n="alloa.go">J'ai développé des logiciels internes en Go, avec gRPC.</li>
+                        <li data-i18n="alloa.django">J'ai créé des interfaces pour le site web et leurs intégrations back-end, en Django.</li>
                     </ul>
                 </article>
             </div>
         </section>
 
         <section id="skills" class="block">
-            <h2>Compétences</h2>
+            <h2 data-i18n="nav.skills">Compétences</h2>
             <div class="block-body">
                 <dl class="skills">
                     <dt>Front</dt>
                     <dd>Angular, Tailwind CSS, HTML, CSS</dd>
                     <dt>Back</dt>
-                    <dd>C# / .NET, NestJS, Java / JEE, SQL</dd>
-                    <dt>IA &amp; data</dt>
-                    <dd>Python, statistiques, analyse de données</dd>
-                    <dt>Outils</dt>
+                    <dd>C# / .NET, NestJS, Go, Django, Java / JEE, SQL</dd>
+                    <dt data-i18n="skills.data">IA &amp; data</dt>
+                    <dd data-i18n="skills.dataList">Python, statistiques, analyse de données</dd>
+                    <dt data-i18n="skills.tools">Outils</dt>
                     <dd>Git, Docker, Azure, Linux, Cypress</dd>
                 </dl>
             </div>
         </section>
 
         <section id="projects" class="block">
-            <h2>Projets</h2>
+            <h2 data-i18n="nav.projects">Projets</h2>
             <div class="block-body">
 
                 <article class="project">
-                    <a class="project-media" href="https://github.com/aurxdev/HGPTE" target="_blank" rel="noopener" data-gif="hgpte.gif">
-                        <img src="hgpte.png" alt="Capture d'écran de HGPTE Engine" loading="lazy">
-                        <img class="project-gif" alt="" aria-hidden="true">
+                    <!-- Doublon du lien du titre : retiré du clavier et des lecteurs d'écran -->
+                    <a class="project-media" href="https://github.com/aurxdev/HGPTE" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <video src="hgpte.mp4" poster="hgpte.webp" muted loop playsinline preload="none"></video>
                     </a>
-                    <p class="meta hover-hint">Survolez l'image pour voir le jeu en mouvement.</p>
                     <h3><a href="https://github.com/aurxdev/HGPTE" target="_blank" rel="noopener">HGPTE Engine</a></h3>
                     <p class="meta">C# · Unity</p>
-                    <p>Un jeu en C# avec Unity : physique, détection de collisions, inventaire et ennemis pilotés par une IA simple.</p>
+                    <p data-i18n="projects.hgpte">Un jeu en C# avec Unity : physique, détection de collisions, inventaire et ennemis pilotés par une IA simple.</p>
                 </article>
 
                 <!--
@@ -131,29 +139,31 @@
                 </article>
                 -->
 
-                <p>Le reste de mon code est sur <a href="https://github.com/aurxdev/" target="_blank" rel="noopener">GitHub</a>.</p>
+                <p><span data-i18n="projects.more">Le reste de mon code est sur</span> <a href="https://github.com/aurxdev/" target="_blank" rel="noopener">GitHub</a>.</p>
             </div>
         </section>
 
         <section id="contact" class="block">
             <h2>Contact</h2>
             <div class="block-body">
-                <p>Une question, une opportunité ? Le formulaire m'envoie directement un mail. Je suis aussi sur <a href="https://www.linkedin.com/in/aurelien-teilhet/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                <p><span data-i18n="contact.text">Une question, une opportunité ? Le formulaire m'envoie directement un mail. Je suis aussi sur</span> <a href="https://www.linkedin.com/in/aurelien-teilhet/" target="_blank" rel="noopener">LinkedIn</a>.</p>
 
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xykvezzz" method="POST">
                     <div>
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" autocomplete="name" required>
+                        <label for="name" data-i18n="contact.name">Nom</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" id="email" autocomplete="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
                     <div>
                         <label for="message">Message</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" id="submitBtn" class="button">Envoyer</button>
+                    <!-- Pot de miel Formspree : les bots le remplissent, les humains ne le voient pas -->
+                    <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+                    <button type="submit" id="submitBtn" class="button" data-i18n="contact.send">Envoyer</button>
                     <p id="formStatus" class="form-status" role="status" hidden></p>
                 </form>
             </div>
@@ -168,7 +178,7 @@
 
     <footer class="site-footer">
         <p>© <span id="current-year">2026</span> Aurélien Teilhet</p>
-        <p><a href="https://github.com/aurxdev/aurxdev.github.io" target="_blank" rel="noopener">Code source du site</a></p>
+        <p><a href="https://github.com/aurxdev/aurxdev.github.io" target="_blank" rel="noopener" data-i18n="footer.source">Code source du site</a></p>
     </footer>
 
 </div>

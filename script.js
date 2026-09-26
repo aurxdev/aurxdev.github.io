@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'Aurélien Teilhet, développeur full stack';
 
         const cvDownload = document.getElementById('cvDownload');
-        if (cvDownload) cvDownload.href = language === 'en' ? 'cv_anglais.pdf' : 'cv.pdf';
+        if (cvDownload) cvDownload.href = language === 'en' ? 'cv_en.pdf' : 'cv_fr.pdf';
 
         i18nElements.forEach((element) => {
             const key = element.dataset.i18n;

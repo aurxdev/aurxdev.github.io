@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             'contact.text': 'A question or an opportunity? The form sends me an email directly. I\'m also on',
             'contact.name': 'Name',
             'contact.send': 'Send',
-            'footer.source': 'Site source code'
+            'footer.source': 'Site source code',
+            'theme.light': 'Switch to light theme',
+            'theme.dark': 'Switch to dark theme'
         }
     };
 
@@ -80,6 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
             try { localStorage.setItem('portfolio-language', language); } catch { /* navigation privée */ }
             translatePage(language);
         });
+    });
+
+    // Thème : sombre par défaut, clair au choix (le choix enregistré est appliqué dès le <head>)
+    document.getElementById('themeToggle').addEventListener('click', () => {
+        const light = document.documentElement.dataset.theme !== 'light';
+        if (light) document.documentElement.dataset.theme = 'light';
+        else delete document.documentElement.dataset.theme;
+        try { localStorage.setItem('portfolio-theme', light ? 'light' : 'dark'); } catch { /* navigation privée */ }
     });
 
     // Formulaire de contact (Formspree). Sans JS, le formulaire poste directement sur l'action.
